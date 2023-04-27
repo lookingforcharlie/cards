@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Cards in Tailwind CSS</title>
+  </head>
+  <body>
+    <div
+      class="flex min-h-screen flex-col items-center justify-center bg-slate-100 py-24"
+    >
+      <h1 class="text-3xl font-bold mb-8">Card Flipper</h1>
+
+      <!-- Card Flipper start:  -->
+      <div class="group h-96 w-80 [perspective:1000px] mb-24">
+        <div
+          class="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+        >
+          <!-- front side wrapper -->
+          <div class="absolute inset-0">
+            <img
+              class="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
+              src="https://images.unsplash.com/photo-1562583489-bf23ec64651d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt="image"
+            />
+          </div>
+
+          <!-- back side wrapper -->
+          <div
+            class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]"
+          >
+            <div
+              class="flex min-h-full flex-col items-center justify-center space-y-4"
+            >
+              <h1 class="text-3xl font-bold">Jane Doe</h1>
+              <p class="text-lg">Photographer & Art</p>
+              <p class="text-base">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </p>
+              <button
+                class="mt-2 rounded-md bg-neutral-800 py-1 px-2 text-sm hover:bg-neutral-900"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+          <!-- back side ends here -->
+        </div>
+      </div>
+      <!-- Card Flipper ends -->
+
+      <!-- Animated Image Cards wrapper -->
+      <div
+        class="flex flex-col h-[600px] items-center justify-center bg-neutral-800 mb-12"
+      >
+        <h1 class="text-3xl text-white mb-20">Animated Image Cards</h1>
+        <!-- Grid wrapper for all images -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-12">
+          <!-- image 1 wrapper -->
+          <div
+            class="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-orange-900/30 transition-shadow"
+          >
+            <div class="h-96 w-72">
+              <img
+                class="h-full w-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300"
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""
+              />
+            </div>
+            <!-- the background overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"
+            ></div>
+            <!-- The content of text and buttons -->
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-transform duration-500"
+            >
+              <h1 class="text-3xl font-bold text-white">Beauty</h1>
+              <p
+                class="text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                earum maiores. Alias.
+              </p>
+              <button
+                class="rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"
+              >
+                see more
+              </button>
+            </div>
+          </div>
+          <!-- image 1 ends -->
+
+          <!-- image 2 wrapper -->
+          <div
+            class="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-orange-900/30 transition-shadow"
+          >
+            <div class="h-96 w-72">
+              <img
+                class="h-full w-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300"
+                src="https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                alt=""
+              />
+            </div>
+            <!-- the background overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"
+            ></div>
+            <!-- The content of text and buttons -->
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-transform duration-500"
+            >
+              <h1 class="text-3xl font-bold text-white">Beyond Builder</h1>
+              <p
+                class="text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                earum maiores. Alias.
+              </p>
+              <button
+                class="rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"
+              >
+                see more
+              </button>
+            </div>
+          </div>
+          <!-- image 2 ends -->
+
+          <!-- image 3 wrapper -->
+          <div
+            class="group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-orange-900/30 transition-shadow"
+          >
+            <div class="h-96 w-72">
+              <img
+                class="h-full w-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-300"
+                src="https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                alt=""
+              />
+            </div>
+            <!-- the background overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"
+            ></div>
+            <!-- The content of text and buttons -->
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-transform duration-500"
+            >
+              <h1 class="text-3xl font-bold text-white">Shooting star</h1>
+              <p
+                class="text-lg italic text-white mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+                earum maiores. Alias.
+              </p>
+              <button
+                class="rounded-full bg-neutral-900 py-2 px-3.5 text-sm capitalize text-white shadow shadow-black/60"
+              >
+                see more
+              </button>
+            </div>
+          </div>
+          <!-- image 3 ends -->
+        </div>
+        <div class="fixed top-8">
+          <p class="text-2xl font-semibold text-black">
+            All Images are from
+            <a href="https://unsplash.com" class="text-blue-500"
+              >Unsplash.com</a
+            >
+          </p>
+        </div>
+      </div>
+      <!-- Animated Image Cards ends -->
+    </div>
+  </body>
+</html>
